@@ -51,13 +51,15 @@ nav ul li{
 	padding: 4% 2%;
 }
 
+	nav ul li a{
+		color: #000;
+	}
 nav div {
 	border: solid #000 1px;
 	height: 8px;
 	width: 80%;
 	margin: 0 auto;
 }
-
 
 #logo-turma{
 	width: 15%;
@@ -71,7 +73,7 @@ header h1, h2{
 
 header h1 {
 	font-family: 'HaikusScript-V8';
-	font-size: 6em;
+	font-size: 3em;
 	color: #000000;
 	font-style: normal;
 	text-align: left;
@@ -98,19 +100,21 @@ header p{
 	line-height: 0.75em;
 }
 
-#legume1{
+.legumes1{
 	position: absolute;
 	width: 28%;
 	top: 20%;
 	right: 0;
-	background: lightgreen;
 }
 
-#legume2{
+.legumes2{
 	position: absolute;
 	width: 16%;
 	top: 45%;
 	left: 0;
+}
+.legumes-mobile{
+	display: none;
 }
 
 #sobre{
@@ -153,6 +157,7 @@ section h2{
 
 #resultados {
 	display: flex;
+	/*flex-direction: column;*/
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 90%;
@@ -169,7 +174,7 @@ section h2{
 	margin: 0 8%;
 	margin-top: 126px;
 	margin-bottom: 202px;
-	width: 24%;
+	width: 30%;
 	height: 100%;
 	/*max-width: 30%;*/
 }
@@ -188,7 +193,7 @@ section h2{
 	justify-content: center;
 	align-items: center;
 	flex-flow: row nowrap;
-	max-width: 70%;
+	max-width: 90%;
 	margin-top: 5%;
 }
 
@@ -197,7 +202,7 @@ section h2{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	max-width: 70%;
+	max-width: 65%;
 	margin-right: 5%;
 }
 
@@ -212,6 +217,7 @@ section h2{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	min-width: 100%;
 }
 
 #midia img{
@@ -367,11 +373,73 @@ footer ul div img {
 */
 @media (max-width: 700px) {
 	body {
-		background: tomato;
+		background: white;
+		width: 50%;
+		margin-left: 11%;
+		margin-top: 15px;
+
+	}
+	#logo-turma{
+		margin-top: 13%;
+		justify-content: center; 
+		width: 40%;
+		margin-bottom: 13%;
+	}
+	header{
+		align-items: center;
+	}
+
+	.legumes1, .legumes2{
+		display: none;
+	}
+	.legumes-mobile{
+		display: block;
+		position: absolute;
+		width: 30%;
+		left: -2%;
+		bottom: 0%;
+		right: 0%;
+	}
+	#resultados {
+		flex-direction: column;
+	}
+	#resultados .image {
+		margin: 0 auto;
+		width: 90%;
+		padding: 15% 0;
+	}
+	#midia {
+		width: 100%;
+	}
+	.cont-midia {
+		flex-direction: column;
+	}
+	.cont-midia1, .cont-midia2{
+		min-width: 100%;
+		margin: 0 ;
+	} 
+	#acontecendo{
+		width: 100%;
+	}
+	.cont-acontecendo{
+		flex-direction: column;
+		justify-content: center;
+	}
+	.cont-acontecendo div{
+		width: 90%;	
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+	.cont-acontecendo div img{
+		width: 100%;
 	}
 }
+
 @media(max-width: 400px) {
 	body{
 		background: purple;
+
 	}
 }
